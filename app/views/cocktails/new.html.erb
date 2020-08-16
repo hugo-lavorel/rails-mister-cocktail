@@ -1,7 +1,10 @@
-<h1>Add a new cocktail 🍸</h1>
+<div class="form-cocktail">
+  <h1>Add a new cocktail 🍸</h1>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit 'Add cocktail' %>
-<% end %>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class:"btn btn-success" %>
+  <% end %>
+  <%= link_to 'Back to the cocktails', cocktails_path, class:"btn btn-info mt-3" %>
+</div>
